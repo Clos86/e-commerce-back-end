@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
   Category.create({
     category_name: reg.body.category_name,
   })
-  .then(dbCategoryData => res.jaso(dbCategoryData))
+  .then(dbCategoryData => res.json(dbCategoryData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -62,13 +62,12 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
   Category.update(req.body, {
-    individualHooks: true,
     where: {
       id: req.params.id
     }
   })
   .then(dbCategoryData => {
-    if (!dbCategoryData[0]) {
+    if (!dbCategoryData) {
       res.status(404).json({ message: 'No category found with this id' });
       return;
     }
