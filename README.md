@@ -11,7 +11,7 @@
   ## Installation 
   The application requires NodeJS and MySQL. Run ```npm instal``` and download all the dependencies. Connect to your MySQL and run ```source db/schema.sql``` to create the database and then quit out of MySQL.  In the server.js file look for ```sequelize.sync({ force: false })``` and change ```false``` to ```true```. In the command line run ```npm run seed``` then change ```force``` back to ```false```. Once that is all set you can run the app with ```npm start```.
   ## Usage 
-  Walkthrough Video
+  [Walkthrough Video](#https://drive.google.com/file/d/11nR5fYioiOXaPM9E31Xm15Zh9u1004Z7/view)
   
   ## License 
   This project is license under [ISC](https://choosealicense.com/licenses/ISC/)
